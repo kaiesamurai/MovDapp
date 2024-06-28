@@ -1,0 +1,12 @@
+[package]
+name = "{{ crate_name }}"
+version = "0.0.0"
+
+[dependencies.AptosFramework]
+git = "https://github.com/movemntdev/aptos-core.git"
+subdir = "aptos-move/framework/aptos-framework"
+rev = "testnet" 
+
+[addresses]
+std =  "0x1"
+hello_blockchain = "_"

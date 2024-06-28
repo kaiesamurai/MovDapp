@@ -1,0 +1,32 @@
+[template]
+cargo_generate_version = ">=0.17.4"
+ignore = [
+    ".git", 
+    ".github", 
+    "README.md", 
+    "book", 
+    "examples", 
+    "examples_nursery", 
+    "./.devcontainer/maintainer",
+    "./.devcontainer/book",
+    "./.github",
+    "./abin",
+    "Dockerfile.movement-dev",
+    "PULL_REQUEST_TEMPLATE.md",
+    "build",
+    "amplify.yml",
+    "./bin/maintainer",
+    "./bin/install.sh",
+    "./bin/movementctl.sh"
+]
+
+[placeholders.devcontainer]
+type = "bool"
+prompt = "Configure project to use Dev Containers (VS Code and GitHub Codespaces)?"
+default = false
+
+[conditional.'devcontainer == false']
+ignore = [
+    ".devcontainer/",
+    ".vscode/tasks.json",
+]

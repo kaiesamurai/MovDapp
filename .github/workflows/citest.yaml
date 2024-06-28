@@ -1,0 +1,13 @@
+name: Run Citests
+
+on:
+  push:
+    branches:
+      - main
+jobs:       
+  test:
+      runs-on: ubuntu-latest
+      container:
+        image: mvlbs/m1:latest
+      steps:
+        - run: ./bin/maintainer/citest.sh
